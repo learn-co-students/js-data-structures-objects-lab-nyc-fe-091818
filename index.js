@@ -1,27 +1,25 @@
 // Write your solution in this file!
-const driver = {
-  name: 'Sam'
-}
+const driver = {}
 
 function updateDriverWithKeyAndValue(driver, key, value) {
   const driverCopy = {...driver}
-  driverCopy.address = '11 Broadway'
+  driverCopy[key] = value
   return driverCopy
 }
 
 function destructivelyUpdateDriverWithKeyAndValue(driver, key, value) {
-  driver.address = '12 Broadway'
+  driver[key] = value
   return driver
 }
 
 function deleteFromDriverByKey(driver, key) {
   const driverCopy = {...driver}
-  delete driverCopy.name
+  delete driverCopy[key]
   return driverCopy
 }
 
 function destructivelyDeleteFromDriverByKey(driver, key) {
-  delete driver.name
+  delete driver[key]
   return driver
 }
 
